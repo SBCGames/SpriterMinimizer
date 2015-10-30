@@ -29,9 +29,9 @@ outputFile - file for minimized output (default = inputFile_out)
  
  Savings between binary and Spriter output without pretty printing is 70%.
 
- Of course you need to write your own loader to load binary output.
- 
  - 346 kb standard, pretty printed, Spriter output,
  - 240 kb Spriter output with pretty printing unchecked,
  - 165 kb after minimization with SpriteMinimizer (with default definitions.xml),
  - 74 kb when converted into binary format with smallOffset switch on.
+
+Of course you need to write your own loader to load binary output.
