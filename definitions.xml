@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<minimizer>
+  <items>
+    <!-- spriter_data -->
+    <item name="ELM_SPRITER_DATA" minName="s" bin="1" type="none" />
+    <item name="ATTR_VERSION" minName="v" bin="0" type="str" />
+    <item name="ATTR_GENERATOR" minName="g" bin="1" type="str" />
+    <item name="ATTR_GENERATOR_VERSION" minName="gv" bin="2" type="str" />
+    <!-- folder -->
+    <item name="ELM_FOLDER" minName="d" bin="2" type="none" />
+    <item name="ATTR_FOLDER_ID" minName="i" bin="0" type="uint8" />
+    <item name="ATTR_FOLDER_NAME" minName="n" bin="1" type="str" />
+    <!-- file -->
+    <item name="ELM_FILE" minName="f" bin="3" type="none" />
+    <item name="ATTR_FILE_ID" minName="i" bin="0" type="uint8" />
+    <item name="ATTR_FILE_NAME" minName="n" bin="1" type="str" />
+    <item name="ATTR_FILE_WIDTH" minName="w" bin="2" type="uint16" />
+    <item name="ATTR_FILE_HEIGHT" minName="h" bin="3" type="uint16" />
+    <item name="ATTR_FILE_PIVOT_X" minName="px" bin="4" type="fixed16_16" />
+    <item name="ATTR_FILE_PIVOT_Y" minName="py" bin="5" type="fixed16_16" />
+    <!-- entity -->
+    <item name="ELM_ENTITY" minName="e" bin="4" type="none" />
+    <item name="ATTR_ENTITY_ID" minName="i" bin="0" type="uint8" />
+    <item name="ATTR_ENTITY_NAME" minName="n" bin="1" type="str" />
+    <!-- obj_info -->
+    <item name="ELM_OBJ_INFO" minName="o" bin="5" type="none" />
+    <item name="ATTR_OBJ_INFO_NAME" minName="n" bin="0" type="str" />
+    <item name="ATTR_OBJ_INFO_TYPE" minName="t" bin="1" type="objInfoType" />
+    <item name="ATTR_OBJ_INFO_WIDTH" minName="w" bin="2" type="fixed16_16" />
+    <item name="ATTR_OBJ_INFO_HEIGHT" minName="h" bin="3" type="fixed16_16" />
+    <!-- frames -->
+    <item name="ELM_FRAMES" minName="f" bin="6" type="none" />
+    <item name="ELM_FRAMES_I" minName="i" bin="7" type="none" />
+    <item name="ATTR_FRAMES_I_FOLDER" minName="d" bin="0" type="uint8" />
+    <item name="ATTR_FRAMES_I_FILE" minName="f" bin="1" type="uint8" />
+    <!-- animation -->
+    <item name="ELM_ANIMATION" minName="a" bin="8" type="none" />
+    <item name="ATTR_ANIMATION_ID" minName="i" bin="0" type="uint8" />
+    <item name="ATTR_ANIMATION_NAME" minName="n" bin="1" type="str" />
+    <item name="ATTR_ANIMATION_LENGTH" minName="l" bin="2" type="uint32" />
+    <item name="ATTR_ANIMATION_INTERVAL" minName="t" bin="3" type="uint16" />
+    <item name="ATTR_ANIMATION_LOOPING" minName="c" bin="4" type="boolean" />
+    <!-- mainline -->
+    <item name="ELM_MAINLINE" minName="m" bin="9" type="none" />
+    <!-- key -->
+    <item name="ELM_MAINLINE_KEY" minName="k" bin="10" type="none" />
+    <item name="ATTR_MAINLINE_KEY_ID" minName="i" bin="0" type="uint8" />
+    <item name="ATTR_MAINLINE_KEY_TIME" minName="t" bin="1" type="uint32" />
+    <!-- bone_ref -->
+    <item name="ELM_BONE_REF" minName="b" bin="11" type="none" />
+    <item name="ATTR_BONE_REF_ID" minName="i" bin="0" type="uint8" />
+    <item name="ATTR_BONE_REF_PARENT" minName="p" bin="1" type="uint8" />
+    <item name="ATTR_BONE_REF_TIMELINE" minName="t" bin="2" type="uint8" />
+    <item name="ATTR_BONE_REF_KEY" minName="k" bin="3" type="uint8" />
+    <!-- object_ref -->
+    <item name="ELM_OBJ_REF" minName="o" bin="12" type="none" />
+    <item name="ATTR_OBJ_REF_ID" minName="i" bin="4" type="uint8" />
+    <item name="ATTR_OBJ_REF_PARENT" minName="p" bin="5" type="uint8" />
+    <item name="ATTR_OBJ_REF_TIMELINE" minName="t" bin="6" type="uint8" />
+    <item name="ATTR_OBJ_REF_KEY" minName="k" bin="7" type="uint8" />
+    <item name="ATTR_OBJ_REF_NAME" minName="n" bin="8" type="str" />
+    <item name="ATTR_OBJ_REF_Z" minName="z" bin="9" type="uint8" />
+    <item name="ATTR_OBJ_REF_FOLDER" minName="d" bin="10" type="uint8" />
+    <item name="ATTR_OBJ_REF_FILE" minName="f" bin="11" type="uint8" />
+    <item name="ATTR_OBJ_REF_ABS_X" minName="ax" bin="12" type="fixed16_16" />
+    <item name="ATTR_OBJ_REF_ABS_Y" minName="ay" bin="13" type="fixed16_16" />
+    <item name="ATTR_OBJ_REF_ABS_PIVOT_X" minName="apx" bin="14" type="fixed16_16" />
+    <item name="ATTR_OBJ_REF_ABS_PIVOT_Y" minName="apy" bin="15" type="fixed16_16" />
+    <item name="ATTR_OBJ_REF_ABS_SCALE_X" minName="asx" bin="16" type="fixed16_16" />
+    <item name="ATTR_OBJ_REF_ABS_SCALE_Y" minName="asy" bin="17" type="fixed16_16" />
+    <item name="ATTR_OBJ_REF_ANGLE" minName="r" bin="18" type="fixed16_16" />
+    <item name="ATTR_OBJ_REF_ALPHA" minName="a" bin="19" type="fixed1_7" />
+    <!-- timeline -->
+    <item name="EML_TIMELINE" minName="t" bin="13" type="none" />
+    <item name="ATTR_TIMELINE_ID" minName="i" bin="0" type="uint8" />
+    <item name="ATTR_TIMELINE_NAME" minName="n" bin="1" type="str" />
+    <item name="ATTR_TIMELINE_OBJ" minName="o" bin="2" type="uint8" />
+    <item name="ATTR_TIMELINE_OBJ_TYPE" minName="t" bin="3" type="timelineObjType" />
+    <!-- key -->
+    <item name="ELM_TIMELINE_KEY" minName="k" bin="10" type="none" />
+    <item name="ATTR_TIMELINE_KEY_ID" minName="i" bin="0" type="uint8" />
+    <item name="ATTR_TIMELINE_KEY_TIME" minName="t" bin="1" type="uint32" />
+    <item name="ATTR_TIMELINE_KEY_SPIN" minName="s" bin="2" type="int8" />
+    <item name="ATTR_TIMELINE_KEY_CURVE" minName="ct" bin="3" type="curveType" />
+    <item name="ATTR_TIMELINE_KEY_C1" minName="c1" bin="4" type="fixed1_7" />
+    <item name="ATTR_TIMELINE_KEY_C2" minName="c2" bin="5" type="fixed1_7" />
+    <!-- bone -->
+    <item name="ELM_BONE" minName="b" bin="14" type="none" />
+    <item name="ATTR_BONE_X" minName="x" bin="0" type="fixed16_16" />
+    <item name="ATTR_BONE_Y" minName="y" bin="1" type="fixed16_16" />
+    <item name="ATTR_BONE_ANGLE" minName="r" bin="2" type="fixed16_16" />
+    <item name="ATTR_BONE_SCALE_X" minName="sx" bin="3" type="fixed16_16" />
+    <item name="ATTR_BONE_SCALE_Y" minName="sy" bin="4" type="fixed16_16" />
+    <!-- object -->
+    <item name="ELM_OBJ" minName="o" bin="15" type="none" />
+    <item name="ATTR_OBJ_FOLDER" minName="d" bin="5" type="uint8" />
+    <item name="ATTR_OBJ_FILE" minName="f" bin="6" type="uint8" />
+    <item name="ATTR_OBJ_X" minName="x" bin="7" type="fixed16_16" />
+    <item name="ATTR_OBJ_Y" minName="y" bin="8" type="fixed16_16" />
+    <item name="ATTR_OBJ_SCALE_X" minName="sx" bin="9" type="fixed16_16" />
+    <item name="ATTR_OBJ_SCALE_Y" minName="sy" bin="10" type="fixed16_16" />
+    <item name="ATTR_OBJ_PIVOT_X" minName="px" bin="11" type="fixed16_16" />
+    <item name="ATTR_OBJ_PIVOT_Y" minName="py" bin="12" type="fixed16_16" />
+    <item name="ATTR_OBJ_ANGLE" minName="r" bin="13" type="fixed16_16" />
+    <item name="ATTR_OBJ_ALPHA" minName="a" bin="14" type="fixed1_7" />
+  </items>
+  <spriter>
+    <!-- spriter_data -->
+    <element name="spriter_data" item="ELM_SPRITER_DATA">
+      <attribute name="scml_version" item="ATTR_VERSION" />
+      <attribute name="generator" item="ATTR_GENERATOR" />
+      <attribute name="generator_version" item="ATTR_GENERATOR_VERSION" />
+      <!-- folder -->
+      <element name="folder" item="ELM_FOLDER">
+        <attribute name="id" item="ATTR_FOLDER_ID" />
+        <attribute name="name" item="ATTR_FOLDER_NAME" />
+        <!-- file -->
+        <element name="file" item="ELM_FILE">
+          <attribute name="id" item="ATTR_FILE_ID" />
+          <attribute name="name" item="ATTR_FILE_NAME" />
+          <attribute name="width" item="ATTR_FILE_WIDTH" />
+          <attribute name="height" item="ATTR_FILE_HEIGHT" />
+          <attribute name="pivot_x" item="ATTR_FILE_PIVOT_X" />
+          <attribute name="pivot_y" item="ATTR_FILE_PIVOT_Y" />
+        </element>
+      </element>
+      <!-- entity -->
+      <element name="entity" item="ELM_ENTITY">
+        <attribute name="id" item="ATTR_ENTITY_ID" />
+        <attribute name="name" item="ATTR_ENTITY_NAME" />
+        <!-- obj_info -->
+        <element name="obj_info" item="ELM_OBJ_INFO">
+          <attribute name="name" item="ATTR_OBJ_INFO_NAME" />
+          <attribute name="type" item="ATTR_OBJ_INFO_TYPE" />
+          <attribute name="w" item="ATTR_OBJ_INFO_WIDTH" />
+          <attribute name="h" item="ATTR_OBJ_INFO_HEIGHT" />
+          <!-- frames -->
+          <element name="frames" item="ELM_FRAMES">
+            <element name="i" item="ELM_FRAMES_I">
+              <attribute name="folder" item="ATTR_FRAMES_I_FOLDER" />
+              <attribute name="file" item="ATTR_FRAMES_I_FILE" />
+            </element>
+          </element>
+        </element>
+        <!-- animation -->
+        <element name="animation" item="ELM_ANIMATION">
+          <attribute name="id" item="ATTR_ANIMATION_ID" />
+          <attribute name="name" item="ATTR_ANIMATION_NAME" />
+          <attribute name="length" item="ATTR_ANIMATION_LENGTH" />
+          <attribute name="interval" item="ATTR_ANIMATION_INTERVAL" />
+          <attribute name="looping" item="ATTR_ANIMATION_LOOPING" />
+          <!-- mainline -->
+          <element name="mainline" item="ELM_MAINLINE">
+            <!-- key -->
+            <element name="key" item="ELM_MAINLINE_KEY">
+              <attribute name="id" item="ATTR_MAINLINE_KEY_ID" />
+              <attribute name="time" item="ATTR_MAINLINE_KEY_TIME" />
+              <!-- bone_ref -->
+              <element name="bone_ref" item="ELM_BONE_REF">
+                <attribute name="id" item="ATTR_BONE_REF_ID" />
+                <attribute name="parent" item="ATTR_BONE_REF_PARENT" />
+                <attribute name="timeline" item="ATTR_BONE_REF_TIMELINE" />
+                <attribute name="key" item="ATTR_BONE_REF_KEY" />
+              </element>
+              <!-- object_ref -->
+              <element name="object_ref" item="ELM_OBJ_REF">
+                <attribute name="id" item="ATTR_OBJ_REF_ID" />
+                <attribute name="name" item="ATTR_OBJ_REF_NAME" />
+                <attribute name="timeline" item="ATTR_OBJ_REF_TIMELINE" />
+                <attribute name="parent" item="ATTR_OBJ_REF_PARENT" />
+                <attribute name="key" item="ATTR_OBJ_REF_KEY" />
+                <attribute name="z_index" item="ATTR_OBJ_REF_Z" />
+                <attribute name="folder" item="ATTR_OBJ_REF_FOLDER" />
+                <attribute name="file" item="ATTR_OBJ_REF_FILE" />
+                <attribute name="abs_x" item="ATTR_OBJ_REF_ABS_X" />
+                <attribute name="abs_y" item="ATTR_OBJ_REF_ABS_Y" />
+                <attribute name="abs_pivot_x" item="ATTR_OBJ_REF_ABS_PIVOT_X" />
+                <attribute name="abs_pivot_y" item="ATTR_OBJ_REF_ABS_PIVOT_Y" />
+                <attribute name="abs_scale_x" item="ATTR_OBJ_REF_ABS_SCALE_X" />
+                <attribute name="abs_scale_y" item="ATTR_OBJ_REF_ABS_SCALE_Y" />
+                <attribute name="abs_angle" item="ATTR_OBJ_REF_ANGLE" />
+                <attribute name="abs_a" item="ATTR_OBJ_REF_ALPHA" />
+              </element>
+            </element>
+          </element>
+          <!-- timeline -->
+          <element name="timeline" item="EML_TIMELINE">
+            <attribute name="id" item="ATTR_TIMELINE_ID" />
+            <attribute name="name" item="ATTR_TIMELINE_NAME" />
+            <attribute name="obj" item="ATTR_TIMELINE_OBJ" />
+            <attribute name="object_type" item="ATTR_TIMELINE_OBJ_TYPE" />
+            <!-- key -->
+            <element name="key" item="ELM_TIMELINE_KEY">
+              <attribute name="id" item="ATTR_TIMELINE_KEY_ID" />
+              <attribute name="time" item="ATTR_TIMELINE_KEY_TIME" />
+              <attribute name="spin" item="ATTR_TIMELINE_KEY_SPIN" />
+              <attribute name="curve_type" item="ATTR_TIMELINE_KEY_CURVE" />
+              <attribute name="c1" item="ATTR_TIMELINE_KEY_C1" />
+              <attribute name="c2" item="ATTR_TIMELINE_KEY_C2" />
+              <!-- bone -->
+              <element name="bone" item="ELM_BONE">
+                <attribute name="x" item="ATTR_BONE_X" />
+                <attribute name="y" item="ATTR_BONE_Y" />
+                <attribute name="angle" item="ATTR_BONE_ANGLE" />
+                <attribute name="scale_x" item="ATTR_BONE_SCALE_X" />
+                <attribute name="scale_y" item="ATTR_BONE_SCALE_Y" />
+              </element>
+              <!-- object -->
+              <element name="object" item="ELM_OBJ">
+                <attribute name="folder" item="ATTR_OBJ_FOLDER" />
+                <attribute name="file" item="ATTR_OBJ_FILE" />
+                <attribute name="x" item="ATTR_OBJ_X" />
+                <attribute name="y" item="ATTR_OBJ_Y" />
+                <attribute name="scale_x" item="ATTR_OBJ_SCALE_X" />
+                <attribute name="scale_y" item="ATTR_OBJ_SCALE_Y" />
+                <attribute name="pivot_x" item="ATTR_OBJ_PIVOT_X" />
+                <attribute name="pivot_y" item="ATTR_OBJ_PIVOT_Y" />
+                <attribute name="angle" item="ATTR_OBJ_ANGLE" />
+                <attribute name="a" item="ATTR_OBJ_ALPHA" />
+              </element>
+            </element>
+          </element>>
+        </element>
+      </element>
+    </element>
+  </spriter>
+</minimizer>
