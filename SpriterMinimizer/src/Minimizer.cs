@@ -34,13 +34,14 @@ namespace SpriterMinimizer {
         
         // ----------------------------------------------------------
         private static void PrintUsage() {
-            Console.WriteLine("Usage: SpriteMinimizer inputFile [outputFile] [-defs definitions] [-prettyPrint]\n" +
+            Console.WriteLine("Usage: SpriteMinimizer inputFile [outputFile] [-defs definitions] [-prettyPrint] [-binary] [-smallOffset]\n" +
                 "\n" +
                 "inputFile - file with Spriter .xml (.scml) animation to minimize\n" +
                 "outputFile - file for minimized output (default = inputFile_out)\n" +
                 "-defs definitions - .xml file with old and new names (default = definitions.xml)\n" +
                 "-prettyPrint - make output nice and readable - good for checking if everything is OK or debug (default = false)\n" +
-                "-binary - convert to binary output\n"
+                "-binary - convert to binary output\n" +
+                "-smallOffset - use short instead of int in binary format - can save around 10% of space\n"
                 );
         }
 
