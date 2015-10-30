@@ -14,13 +14,21 @@ namespace SpriterMinimizer {
 
             // read defs
             var defsReader = new DefsReader();
-            var rootDef = defsReader.ReadDefs(options.defsFile);
+            var defs = defsReader.ReadDefs(options);
 
             // convert
-            var convertor = new Convertor();
-            convertor.Convert(options, rootDef);
+            if (options.isInFileXml) {
+                if (!options.outputBinary) {
+                    new XmlMinimizer().Minimize(options, defs.rootDef);
+                } else {
+                    new Xml2Bin().Convert(options, defs.rootDef);
+                }
+            } else {
+
+            }
 
             // to prevent closing console window
+            Console.WriteLine("Done.");
             Console.ReadKey(true);
         }
         
@@ -31,7 +39,8 @@ namespace SpriterMinimizer {
                 "inputFile - file with Spriter .xml (.scml) animation to minimize\n" +
                 "outputFile - file for minimized output (default = inputFile_out)\n" +
                 "-defs definitions - .xml file with old and new names (default = definitions.xml)\n" +
-                "-prettyPrint - make output nice and readable - good for checking if everything is OK or debug (default = false)\n"
+                "-prettyPrint - make output nice and readable - good for checking if everything is OK or debug (default = false)\n" +
+                "-binary - convert to binary output\n"
                 );
         }
 
@@ -52,9 +61,19 @@ namespace SpriterMinimizer {
                         aOptions.prettyPrint = true;
                         break;
 
+                    case "-binary":
+                        aOptions.outputBinary = true;
+                        break;
+
+                    case "-smalloffset":
+                        aOptions.smallOffset = true;
+                        break;
+
                     default:
                         if (!inFileProcessed) {
                             aOptions.inFile = GetFileWithPath(arg);
+                            var extension = Path.GetExtension(aOptions.inFile).ToLower();
+                            aOptions.isInFileXml = (extension == ".xml" || extension == ".scml");
                             inFileProcessed = true;
                         } else {
                             aOptions.outFile = GetFileWithPath(arg);
@@ -67,8 +86,13 @@ namespace SpriterMinimizer {
             if (aOptions.outFile == null) {
                 aOptions.outFile = Path.GetDirectoryName(aOptions.inFile) + Path.DirectorySeparatorChar +
                     Path.GetFileNameWithoutExtension(aOptions.inFile) +
-                    "_out" +
-                    Path.GetExtension(aOptions.inFile);
+                    "_out";
+
+                if (aOptions.outputBinary) {
+                    aOptions.outFile += ".bin";
+                } else {
+                    aOptions.outFile += Path.GetExtension(aOptions.inFile);
+                }
             }
 
             // whether options are ok

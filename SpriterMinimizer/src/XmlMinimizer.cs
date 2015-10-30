@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace SpriterMinimizer {
-    class Convertor {
+    class XmlMinimizer {
 
         private XmlDocument _reader;
         private XmlWriter _writer;
@@ -12,7 +12,7 @@ namespace SpriterMinimizer {
         private HashSet<string> _warnings = new HashSet<string>();
 
         // ----------------------------------------------------------
-        public void Convert(Options aOptions, Def aRootDef) {
+        public void Minimize(Options aOptions, Def aDef) {
             // reader
             _reader = new XmlDocument();
             _reader.Load(aOptions.inFile);
@@ -27,7 +27,7 @@ namespace SpriterMinimizer {
 
             _writer.WriteStartDocument();
 
-            ProcessElement(_reader.DocumentElement, aRootDef);
+            ProcessElement(_reader.DocumentElement, aDef);
 
             _writer.WriteEndDocument();
             _writer.Close();
@@ -43,13 +43,18 @@ namespace SpriterMinimizer {
             bool isElementDef = aDef != null && (aElement.Name == aDef.name);
 
             // write element
-            var newName = isElementDef ? aDef.newName : aElement.Name;
+            var newName = isElementDef ? aDef.item.minName : aElement.Name;
             _writer.WriteStartElement(newName);
+
+            // special case for very first element - add attribute to say this file is minimized
+            if (aElement.Name == "spriter_data") {
+                _writer.WriteAttributeString("min", "true");
+            }
 
             // write all attributes
             foreach(XmlAttribute attribute in aElement.Attributes) {
                 if (aDef != null && aDef.attributes.ContainsKey(attribute.Name)) {
-                    _writer.WriteAttributeString(aDef.attributes[attribute.Name], attribute.Value);
+                    _writer.WriteAttributeString(aDef.attributes[attribute.Name].minName, attribute.Value);
                 } else {
                     PrintMissingAttributeDef(attribute.Name, aElement.Name);
                     _writer.WriteAttributeString(attribute.Name, attribute.Value);
